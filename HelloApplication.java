@@ -146,8 +146,8 @@ public class VehicleRentalSystem extends Application {
             rs = statement.executeQuery("SELECT COUNT(*) FROM customers");
             if (rs.getInt(1) == 0) {
                 statement.execute("INSERT INTO customers (name, email, phone, address, license_number) VALUES " +
-                                          "('John Doe', 'john.doe@example.com', '555-1234', '123 Main St', 'DL-12345678'), " +
-                                          "('Jane Smith', 'jane.smith@example.com', '555-5678', '456 Oak Ave', 'DL-87654321')");
+                                          "('Nthatuoa Ts'olo', 'nthatuoa.tsolo@example.com', '555-1234', '123 Main St', 'DL-12345678'), " +
+                                          "('Lebo Chane', 'Lebo.Chane@example.com', '555-5678', '456 Oak Ave', 'DL-87654321')");
             }
 
         } catch (ClassNotFoundException e) {
