@@ -180,9 +180,9 @@ public class VehicleRentalSystem extends Application {
             Rectangle bg = new Rectangle(800, 600);
             LinearGradient gradient = new LinearGradient(
                     0, 0, 1, 1, true, CycleMethod.NO_CYCLE,
-                    new Stop(0, Color.web("#1a2a6c")),
-                    new Stop(0.5, Color.web("#b21f1f")),
-                    new Stop(1, Color.web("#fdbb2d"))
+                    new Stop(0, Color.web("violet")),
+                    new Stop(0.5, Color.web("blue")),
+                    new Stop(1, Color.web("violet"))
             );
             bg.setFill(gradient);
 
@@ -584,7 +584,7 @@ public class VehicleRentalSystem extends Application {
             gridPane.setAlignment(Pos.CENTER);
 
             ComboBox<String> customerCombo = new ComboBox<>();
-            customerCombo.getItems().addAll("John Doe (JD001)", "Jane Smith (JS002)");
+            customerCombo.getItems().addAll("Nthatuoa Ts'olo (NT001)", "Lebo Chane (LC002)");
             addFormField(gridPane, "Customer:", customerCombo, 0);
 
             ComboBox<String> vehicleCombo = new ComboBox<>();
@@ -623,7 +623,7 @@ public class VehicleRentalSystem extends Application {
             gridPane.setAlignment(Pos.CENTER);
 
             ComboBox<String> bookingCombo = new ComboBox<>();
-            bookingCombo.getItems().addAll("B-001 (John Doe - Toyota Camry)", "B-002 (Jane Smith - Honda CR-V)");
+            bookingCombo.getItems().addAll("B-001 (Nthatuoa - Toyota Camry)", "B-002 (Lebo Chane - Honda CR-V)");
             addFormField(gridPane, "Booking:", bookingCombo, 0);
 
             TextField amountField = new TextField();
@@ -644,8 +644,8 @@ public class VehicleRentalSystem extends Application {
 
             Button calculateBtn = createActionButton("Calculate", "#1E90FF");
             calculateBtn.setOnAction(e -> {
-                amountField.setText("$450.00");
-                totalField.setText("$" + (450.00 + Double.parseDouble(extrasField.getText())));
+                amountField.setText("M450.00");
+                totalField.setText("M" + (450.00 + Double.parseDouble(extrasField.getText())));
             });
 
             Button paymentBtn = createActionButton("Process Payment", "#4CAF50");
@@ -675,17 +675,17 @@ public class VehicleRentalSystem extends Application {
                             "================================\n\n" +
                             "Invoice #: INV-2023-001\n" +
                             "Date: " + LocalDate.now() + "\n\n" +
-                            "Customer: John Doe\n" +
+                            "Customer: Nthatuoa Ts'olo\n" +
                             "License: DL-12345678\n" +
-                            "Contact: john.doe@example.com\n\n" +
+                            "Contact: nthatuoa.tsolo@example.com\n\n" +
                             "Vehicle: Toyota Camry (2022)\n" +
                             "Plate: TC-1001\n" +
                             "Category: Sedan\n\n" +
                             "Rental Period: 5 days\n" +
-                            "Daily Rate: $90.00\n" +
-                            "Subtotal: $450.00\n" +
-                            "Additional Charges: $0.00\n" +
-                            "Total Amount: $450.00\n\n" +
+                            "Daily Rate: M90.00\n" +
+                            "Subtotal: M450.00\n" +
+                            "Additional Charges: M0.00\n" +
+                            "Total Amount: M450.00\n\n" +
                             "Payment Method: Credit Card\n" +
                             "Processed By: " + currentUsername + "\n\n" +
                             "Thank you for your business!\n" +
